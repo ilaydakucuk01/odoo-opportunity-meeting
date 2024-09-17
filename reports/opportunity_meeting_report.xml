@@ -1,0 +1,29 @@
+<odoo>
+    <!-- Template for the Opportunity Meeting report -->
+    <template id="report_opportunity_meeting_document">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Meeting Notes for: <span t-esc="doc.name"/></h2>
+                        <ul>
+                            <t t-foreach="doc.note_lines" t-as="note">
+                                <li t-esc="note.name"/>
+                            </t>
+                        </ul>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="report_opportunity_meeting"
+        model="opportunity.meeting"
+        string="Opportunity Meeting"
+        report_type="qweb-html"
+        name="opportunity_meeting.report_opportunity_meeting_document"
+        file="opportunity_meeting.report_opportunity_meeting_document"
+        print_report_name="'Opportunity Meeting - %s' % (object.name)"
+    />
+</odoo>

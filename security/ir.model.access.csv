@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_opportunity_meeting,access.opportunity.meeting,model_opportunity_meeting,opportunity_meeting_access,1,1,1,1
+access_opportunity_meeting_note,access.opportunity.meeting.note,model_opportunity_meeting_note,opportunity_meeting_access,1,1,1,1
